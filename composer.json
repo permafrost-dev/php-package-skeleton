@@ -1,14 +1,17 @@
 {
     "name": "permafrost-dev/package-skeleton",
     "description": "a basic skeleton for new composer packages",
-    "type": "project",
+    "keywords": [
+        "permafrost"
+    ],
+    "type": "library",
     "license": "MIT",
     "require": {
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.16",
         "permafrost-dev/phpcsfixer-preset": "^1.5",
-        "phpunit/phpunit": "^9.3"
+        "phpunit/phpunit": "^9.4"
     },
     "autoload": {
         "psr-4": {
@@ -20,10 +23,15 @@
             "Permafrost\\Example\\Tests\\": "tests/"
         }
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
+    "scripts": {
+        "test": "vendor/bin/phpunit --testdox",
+        "test-quiet": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+    },
     "config": {
-        "preferred-install": "dist",
         "sort-packages": true
-    }
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev"
 }
