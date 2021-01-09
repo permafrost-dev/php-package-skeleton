@@ -1,0 +1,7 @@
+composer.lock
+/vendor
+*.cache
+.idea/
+.vale.ini
+.php_cs.dist
+/coverage
