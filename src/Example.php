@@ -4,5 +4,4 @@ namespace Permafrost\Example;
 
 class Example
 {
-
 }
